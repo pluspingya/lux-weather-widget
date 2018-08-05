@@ -1,0 +1,52 @@
+# Full Stack Technical Test
+
+The purpose of this exercise is for us to get a sense of how you would approach
+designing and implementing a simple Javascript/CSS/Html banner together with
+api server required to serve data points. We’ve tried to focus on something that
+shows how you would structure both front-end and back-end solution.
+
+If you make any assumptions about requirements or use any online resources to
+solve a problem, please make note of these somewhere obvious inside the solution
+(e.g. code comments).
+Feel free to use any language/toolset you like, however, submission written in
+React and Node.js will be looked on favourably.
+
+## Requirements
+
+Using attached UI Design create a Weather widget showing users an image and
+the current weather of the city that they type in a search box
+(search keyword could be city/country).
+
+This widget should be 100% responsive all the way down to 320px wide use your
+imagination. Refer to attached UI Design
+
+The use of iconography "http://erikflowers.github.io/weather-icons/" looked
+on favourably.
+
+There are some UI design problems that would make the components less reusable
+you should identify and fix.
+
+Please avoid using bootstrap and other CSS frameworks.
+
+### High value:
+Reusability of components/code.
+Use of advanced CSS selectors.
+Use of Pseudo-elements.
+Use of Flexbox and Grid.
+Browser Compatibility: Last 2 browsers / IE 11
+
+## Tests
+Make sure you have tests covering the Banner and Server
+
+## Deliverables
+There is no time limit
+Source code for the solution described above: share your repository
+or forward a zip file of the source code
+
+A list of assumptions that you’ve made while putting this together.
+We’ve only given you a very loose spec, so you’ll probably need to fill in some
+blanks while you are working. If you note down the assumptions, for us,
+then we will be able to review the code within the context of those assumptions.
+
+## Optional
+Tell us what you thought of the test and how long it took you to complete.

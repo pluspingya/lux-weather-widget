@@ -1,0 +1,182 @@
+@font-face {
+  font-family: ms-sans-serif;
+  src: url(../font/micross.ttf);
+}
+
+body {
+  margin: 0px;
+  font-family: ms-sans-serif;
+  color: white;
+  background-color: #a09a9f;
+}
+
+div[id="root"] {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div[id="widget"] {
+  display: flex;
+  flex-direction: column;
+
+  background-color: darkgray;
+  background-image: url(../images/operahouse.jpg); /* will be overriden */
+
+  width: 100%;
+}
+
+div[id="leftView"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(27, 29, 29, 0.5);
+  width: 100%;
+}
+
+div[id="leftView"] > div {
+  width: 65%;
+}
+
+div[id="leftView"] > div:first-child {
+  margin-top: 38px;
+  font-size: 18px;
+}
+
+div[id="leftView"] > div:last-child {
+  margin-bottom: 38px;
+  margin-top: 0px;
+}
+
+div[id="datetimeWeatherView"] {
+  display: flex;
+  flex-direction: column;
+}
+
+div[id="datetimeWeatherView"] > span:last-child {
+  font-size: 30px;
+  margin-left: 0px;
+}
+
+div[id="leftView"] > div:last-child::first-line {
+  font-size: 60px;
+}
+
+i[class^="wi"] {
+  font-size: 60px;
+  margin-left: 0px;
+}
+
+input[id="location-field"] {
+  background: none;
+  border: 0px;
+  font-size: 24px;
+  font-family: ms-sans-serif;
+  color: white;
+}
+
+div[id="rightView"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(27, 29, 29, 0.9);
+  width: 100%;
+}
+
+div[id="rightView"] > div {
+  width: 65%;
+  margin-right:0px; /* intended by design */
+}
+
+div[id="rightView"] > div:first-child {
+  margin-top: 38px;
+}
+
+div[id="rightView"] > div:last-child {
+  margin-bottom: 38px;
+}
+
+div[class="weather-item"] > div:first-child {
+  font-size: 12px;
+}
+
+div[class="weather-item"] > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div[class="weather-item"] > div:nth-child(2) > span:first-child {
+  font-size: 24px;
+}
+
+div[class="weather-item"] > div:nth-child(2) > span:last-child {
+  font-size: 8px;
+}
+
+div[class="weather-item"] > hr {
+  margin-left: 0px;
+}
+
+@media only screen and (min-width: 370px) {
+  div[id="datetimeWeatherView"] > span:last-child {
+    font-size: 35px;
+    margin-left: 10px; /* intended by design */
+  }
+
+  div[id="leftView"] > div:last-child::first-line {
+    font-size: 75px;
+  }
+
+  i[class^="wi"] {
+    font-size: 75px;
+    margin-left: -20px; /* intended by design */
+  }
+
+  div[id="rightView"] > div {
+    margin-right: 10px; /* intended by design */
+  }
+
+  div[class="weather-item"] > hr {
+    margin-left: -10px; /* intended by design */
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  div[id="root"] {
+    align-items: center;
+  }
+
+  div[id="widget"] {
+    flex-direction: row;
+    height: 420px;
+  }
+
+  div[id="leftView"] {
+    justify-content: space-between;
+    align-items: stretch;
+
+    width: 338px;
+  }
+
+  div[id="leftView"] > div {
+    margin: 38px;
+    width: auto;
+  }
+
+  div[id="rightView"] {
+    width: 262px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  div[id="widget"] {
+    width: 600px;
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "author": "Plus Pingya <pluspingya@gmail.com>",
+  "name": "lux-weather-widget",
+  "description": "A web application that displays the current weather and the next five day forecast of the city given in the input box.",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "actionhero": "19.0.2",
+    "axios": "^0.18.0",
+    "fast-csv": "^2.4.1",
+    "ioredis": "latest",
+    "moment": "^2.22.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "ws": "latest"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "chai-string": "^1.4.0",
+    "css-loader": "^1.0.0",
+    "dirty-chai": "^2.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.3.1",
+    "jest": "latest",
+    "jsdom": "^11.12.0",
+    "mocha": "^5.2.0",
+    "r2": "^2.0.1",
+    "sinon": "^6.1.4",
+    "standard": "latest",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-command": "^0.4.1",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "scripts": {
+    "start": "actionhero start",
+    "actionhero": "actionhero",
+    "pretest": "standard",
+    "test": "npm run test-backend;npm run test-frontend;",
+    "test-backend": "NODE_ENV=test mocha 'tests/backend/**/*.js' --recursive",
+    "test-frontend": "NODE_ENV=test mocha 'tests/frontend/**/*.js' --recursive --require babel-core/register",
+    "dev": "./node_modules/.bin/webpack-dev-server --mode development --open",
+    "clean": "rimraf public/",
+    "build": "npm run clean && ./node_modules/.bin/webpack --mode production"
+  },
+  "standard": {
+    "ignore": [
+      "public/*"
+    ],
+    "globals": [
+      "describe",
+      "test",
+      "beforeAll",
+      "beforeEach",
+      "afterAll",
+      "afterEach",
+      "expect",
+      "before",
+      "after",
+      "it",
+      "Event"
+    ]
+  }
+}
